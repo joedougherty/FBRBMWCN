@@ -58,4 +58,4 @@ In the US, a phone number can be composed of:
         suffix
     )
 
-    rx(phone_number_pattern) == re.compile('\\d{3}|\\(\\d{3}\\)(\\s+|\\.|\\-)?\\d{3}(\\s+|\\.|\\-)?\\d{4}')
+    rx(phone_number_pattern) == re.compile('\\d{3}|\\(\\d{3}\\)(\\s+|\\.|\\-)?\\d{3}(\\s+|\\.|\\-)?\\d{4}') # True
