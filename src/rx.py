@@ -1,22 +1,22 @@
 import re   
 
 
-def RX(*patterns):
-    return re.compile(''.join([p for p in patterns]))
+def rx(*patterns):
+    return re.compile(r''.join([p for p in patterns]))
 
 
-def subexp(*patterns):
-    return ''.join(patterns)
+def compose(*patterns):
+    return r''.join(patterns)
 
 
-compose = subexp
+build = compose
 
 
 def match(value):
     return f'{re.escape(value)}'
 
 
-match = then
+then = match
 
 
 def anything_but(value):
@@ -94,7 +94,7 @@ def tab():
     return r'\t'
 
 
-def whitespace():
+def space():
     return r'\s'
 
 
@@ -104,10 +104,6 @@ def word_boundary():
 
 def linebreak():
     return r'(?:(?:\n)|(?:\r\n))'
-
-
-def char_class(*patterns):
-    return f'[{compose(*patterns)}]'
 
 
 # Grouping
@@ -135,3 +131,17 @@ def followed_by(value):
 def not_followed_by(value):
     return f'(?!{re.escape(value)})'
     
+
+# Derived Patterns
+
+def dot():
+    return match('.')
+
+
+def dots():
+    return compose(dot(), one_or_more_times())
+
+
+def spaces():
+    return compose(space(), one_or_more_times())
+
