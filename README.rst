@@ -40,7 +40,7 @@ In the US, a phone number can be composed of:
 
     separator_maybe = compose(group(separator), maybe())
 
-    print(separator) # '(\\s+|\\.|\\-)?'
+    print(separator_maybe) # '(\\s+|\\.|\\-)?'
 
     prefix = compose(digit(), exactly_n_times(3))
 
