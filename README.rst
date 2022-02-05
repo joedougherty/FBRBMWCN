@@ -60,6 +60,7 @@ In the US, one way a phone number can be expressed is as a sequence of:
     rx(phone_number_pattern) == re.compile('\\d{3}|\\(\\d{3}\\)(\\s+|\\.|\\-)?\\d{3}(\\s+|\\.|\\-)?\\d{4}') # True
 
 
+
 BUILTIN PATTERNS
 ----------------
 
