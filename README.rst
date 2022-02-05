@@ -1,12 +1,12 @@
-(A)FBRBMWCN
+FBRBMWCN
 --------
 
-(A) Function-Based Regex Builder Module Without a Clever Name (FBRBMWCN)
+Function-Based Regex Builder Module Without a Clever Name
 
 WHAT
 ----
 
-A tool to help interactively develop regexes expressed as a collection of functions.
+A tool to help interactively develop regexes. 
 
 
 Example
