@@ -30,6 +30,7 @@ def something_but(value):
 def any_of(value):
     return f'[{re.escape(value)}]'
 
+char_class = any_of
 
 def char_range(start, end):
     return f'{start}-{end}'
@@ -117,7 +118,7 @@ def named_group(name, *patterns):
     return f'(?P<{name}>{compose(*patterns)})'
 
 
-def non_capturing_group(name, *patterns):
+def non_capturing_group(*patterns):
     return f'(?:{compose(*patterns)})'
 
 
