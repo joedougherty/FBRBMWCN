@@ -26,13 +26,13 @@ In the US, a phone number can be composed of:
     
     from rx import *
 
-    areacode = compose(
+    area_code = compose(
         digit(), exactly_n_times(3),
         OR(),
         find('('), digit(), exactly_n_times(3), then(')')
     )
 
-    print(areacode) # '\\d{3}|\\(\\d{3}\\)'
+    print(area_code) # '\\d{3}|\\(\\d{3}\\)'
 
     separator = compose(
         spaces(), OR(), dot(), OR(), match('-')
