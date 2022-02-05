@@ -28,7 +28,7 @@ In the US, one way a phone number can be expressed is as a sequence of:
     area_code = compose(
         digit(), exactly_n_times(3),
         OR(),
-        find('('), digit(), exactly_n_times(3), then(')')
+        match('('), digit(), exactly_n_times(3), then(')')
     )
 
     print(area_code) # '\\d{3}|\\(\\d{3}\\)'
