@@ -30,7 +30,9 @@ def something_but(value):
 def any_of(value):
     return f'[{re.escape(value)}]'
 
+
 char_class = any_of
+
 
 def char_range(start, end):
     return f'{start}-{end}'
