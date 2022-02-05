@@ -4,7 +4,7 @@ This is not an original idea of mine.
 and to add thereto our own discoveries: a task from which much advantage will result to those
 who shall hereafter devote themselves to the study...*
 
-  - Hero of Alexandria, *Pneumatics, 2nd ed.*
+-- Hero of Alexandria, *Pneumatics, 2nd ed.*
 
 The rx Structured Regexp Notation
 ---------------------------------
