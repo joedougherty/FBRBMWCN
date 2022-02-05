@@ -72,7 +72,7 @@ def zero_or_more_times():
     return '*'
 
 
-def ():
+def one_or_more_times():
     return '+'
 
 
