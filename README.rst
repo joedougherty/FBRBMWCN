@@ -15,11 +15,11 @@ Example
 In the US, a phone number can be composed of:
 
 
-  - **area code**: three digits, possibly wrapped with parentheses
-  - **separator**: space(s), dash, dot, or non-existent
-  - **prefix**: three digits
-  - **separator**: space(s), dash, dot, or non-existent
-  - **suffix**: four digits
+- **area code**: three digits, possibly wrapped with parentheses
+- **separator**: space(s), dash, dot, or non-existent
+- **prefix**: three digits
+- **separator**: space(s), dash, dot, or non-existent
+- **suffix**: four digits
 
 
 .. code-block:: python
