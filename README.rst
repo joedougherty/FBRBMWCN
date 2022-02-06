@@ -60,6 +60,47 @@ In the US, one way a phone number can be expressed is as a sequence of:
     rx(phone_number_pattern) == re.compile('\\d{3}|\\(\\d{3}\\)(\\s+|\\.|\\-)?\\d{3}(\\s+|\\.|\\-)?\\d{4}') # True
 
 
+USAGE
+-----
+
+``compose()``
+~~~~~~~~~~~~~
+
+
+Use ``compose()`` to join multiple patterns into one.
+
+
+.. code-block:: python
+
+    from rx import compose, group, match, maybe, then
+
+    prefix = compose( 
+        match('http'), group(match('s')), maybe(), then('://') 
+    )
+    
+    print(prefix) # 'http(s)?\\:\\/\\/'
+
+
+
+``rx()``
+~~~~~~~~
+
+
+Use ``rx()`` to create a `compiled regex object <https://docs.python.org/3/library/re.html#re-objects>` from a pattern.
+
+
+.. code-block:: python
+
+    from rx import compose, group, match, maybe, rx, then 
+
+    prefix = compose( 
+        match('http'), group(match('s')), maybe(), then('://') 
+    )
+    
+    compiled_pattern = rx(prefix) 
+
+    compiled_pattern == re.compile(r'http(s)?\:\/\/', re.UNICODE) # True
+
 
 PATTERN FUNCTIONS
 -----------------
