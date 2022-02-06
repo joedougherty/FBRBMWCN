@@ -20,7 +20,8 @@ In the US, one way a phone number can be expressed is as a sequence of:
 
 .. code-block:: python
     
-    from rx import *
+    from rx import (compose, dot, digit, exactly_n_times, 
+                    group, match, maybe, OR, rx, spaces, then)
 
     area_code = compose(
         digit(), exactly_n_times(3),

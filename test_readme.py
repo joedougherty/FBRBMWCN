@@ -1,4 +1,7 @@
-from rx import *
+import re
+
+from rx import (compose, dot, digit, exactly_n_times, 
+                group, match, maybe, OR, rx, spaces, then)
 
 
 def test_readme_example_works_as_advertised():
