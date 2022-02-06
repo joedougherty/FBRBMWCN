@@ -6,7 +6,7 @@ Function-Based Regex Builder Module Without a Clever Name.
 WHAT
 ====
 
-A tool to help interactively develop regexes. 
+A tool to help you interactively develop regexes. 
 
 Example
 =======
