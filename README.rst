@@ -25,7 +25,7 @@ Use ``compose()`` to join multiple patterns into one.
         match('http'), group(match('s')), maybe(), then('://') 
     )
     
-    print(prefix) # 'http(s)?\\:\\/\\/'
+    print(prefix) # 'http(s)?\:\/\/'
 
 
 ``rx()``
