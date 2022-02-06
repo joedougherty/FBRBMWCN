@@ -61,7 +61,7 @@ In the US, one way a phone number can be expressed is as a sequence of:
 
 
 USAGE
------
+=====
 
 ``compose()``
 ~~~~~~~~~~~~~
