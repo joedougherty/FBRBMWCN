@@ -1,7 +1,9 @@
 FBRBMWCN
 --------
 
-Function-Based Regex Builder Module Without a Clever Name.
+Function-Based Regex Builder Module Without a Clever Name. 
+
+A tool to help you interactively develop regexes.
 
 Example
 =======
