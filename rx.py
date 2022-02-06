@@ -9,9 +9,6 @@ def compose(*patterns):
     return r''.join(patterns)
 
 
-build = compose
-
-
 def match(value):
     return f'{re.escape(value)}'
 
