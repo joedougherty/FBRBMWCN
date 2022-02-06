@@ -81,7 +81,7 @@ Use ``compose()`` to join multiple patterns into one.
 ~~~~~~~~
 
 
-Use ``rx()`` to create a `compiled regex object <https://docs.python.org/3/library/re.html#re-objects>` from a pattern.
+Use ``rx()`` to create a `compiled regex object <https://docs.python.org/3/library/re.html#re-objects>_` from a pattern.
 
 
 .. code-block:: python
