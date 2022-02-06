@@ -1,7 +1,7 @@
 FBRBMWCN
 --------
 
-Function-Based Regex Builder Module Without a Clever Name. 
+*Function-Based Regex Builder Module Without a Clever Name*
 
 A tool to help you interactively develop regexes.
 
@@ -76,7 +76,6 @@ Use ``compose()`` to join multiple patterns into one.
     )
     
     print(prefix) # 'http(s)?\\:\\/\\/'
-
 
 
 ``rx()``
