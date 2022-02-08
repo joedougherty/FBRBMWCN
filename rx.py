@@ -132,6 +132,17 @@ def not_followed_by(value):
     return f'(?!{re.escape(value)})'
     
 
+# Lookbehinds
+# https://docs.python.org/3/library/re.html
+
+def preceded_by(value):
+    return f'(?<={re.escape(value)})'
+
+
+def not_preceded_by(value):
+    return f'(?<!{re.escape(value)})'
+
+
 # Derived Patterns
 
 def dot():
