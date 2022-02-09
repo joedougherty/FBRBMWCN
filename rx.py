@@ -63,12 +63,20 @@ def anything():
 # https://docs.python.org/3/howto/regex.html#matching-characters
 # https://thepythonguru.com/python-regular-expression/#basic-patterns-used-in-regular-expression
 
+def between_n_and_m_times(n, m):
+    return '{' + str(n) + ',' + str(m) + '}'
+
+
+def between_n_and_m_times_lazy(n, m):
+    return '{' + str(n) + ',' + str(m) + '}?'
+
+
+def exactly_n_times(n):
+    return f'{ {n} }'
+
+
 def maybe():
     return '?'
-
-
-def zero_or_more_times():
-    return '*'
 
 
 def one_or_more_times():
@@ -79,31 +87,27 @@ def OR():
     return r'|'
 
 
-def between_n_and_m_times(n, m):
-    return '{' + str(n) + ',' + str(m) + '}'
-
-
-def exactly_n_times(n):
-    return f'{ {n} }'
+def zero_or_more_times():
+    return '*'
 
 
 # Some common character patterns
 # https://thepythonguru.com/python-regular-expression/#basic-patterns-used-in-regular-expression
 
-def tab():
-    return r'\t'
+def linebreak():
+    return r'(?:(?:\n)|(?:\r\n))'
 
 
 def space():
     return r'\s'
 
 
+def tab():
+    return r'\t'
+
+
 def word_boundary():
     return r'\b'
-
-
-def linebreak():
-    return r'(?:(?:\n)|(?:\r\n))'
 
 
 # Grouping
