@@ -9,6 +9,8 @@ def compose(*patterns):
     return r''.join(patterns)
 
 
+# Matching
+
 def match(value):
     return f'{re.escape(value)}'
 
@@ -16,16 +18,12 @@ def match(value):
 then = match
 
 
-def anything_but(value):
-    return f'[^{re.escape(value)}]*'
-
-
-def something_but(value):
-    return f'[^{re.escape(value)}]+'
-
-
 def any_of(value):
     return f'[{re.escape(value)}]'
+
+
+def anything_but(value):
+    return f'[^{re.escape(value)}]*'
 
 
 char_class = any_of
@@ -35,82 +33,11 @@ def char_range(start, end):
     return f'{start}-{end}'
 
 
-def start_of_line():
-    return '^'
+def something_but(value):
+    return f'[^{re.escape(value)}]+'
 
 
-def end_of_line():
-    return '$'
-
-
-def word():
-    return r'\w+'
-
-
-def digit():
-    return r'\d'
-
-
-def something():
-    return '.+'
-
-
-def anything():
-    return '.*'
-
-
-# Modifiers
-# https://docs.python.org/3/howto/regex.html#matching-characters
-# https://thepythonguru.com/python-regular-expression/#basic-patterns-used-in-regular-expression
-
-def between_n_and_m_times(n, m):
-    return '{' + str(n) + ',' + str(m) + '}'
-
-
-def between_n_and_m_times_lazy(n, m):
-    return '{' + str(n) + ',' + str(m) + '}?'
-
-
-def exactly_n_times(n):
-    return f'{ {n} }'
-
-
-def maybe():
-    return '?'
-
-
-def one_or_more_times():
-    return '+'
-
-
-def OR():
-    return r'|'
-
-
-def zero_or_more_times():
-    return '*'
-
-
-# Some common character patterns
-# https://thepythonguru.com/python-regular-expression/#basic-patterns-used-in-regular-expression
-
-def linebreak():
-    return r'(?:(?:\n)|(?:\r\n))'
-
-
-def space():
-    return r'\s'
-
-
-def tab():
-    return r'\t'
-
-
-def word_boundary():
-    return r'\b'
-
-
-# Grouping
+# Groups
 # https://docs.python.org/3/howto/regex.html#grouping
 
 def group(*patterns):
@@ -147,7 +74,78 @@ def not_preceded_by(value):
     return f'(?<!{re.escape(value)})'
 
 
-# Derived Patterns
+# Modifiers
+# https://docs.python.org/3/howto/regex.html#matching-characters
+# https://thepythonguru.com/python-regular-expression/#basic-patterns-used-in-regular-expression
+
+def between_n_and_m_times(n, m):
+    return '{' + str(n) + ',' + str(m) + '}'
+
+
+def between_n_and_m_times_lazy(n, m):
+    return '{' + str(n) + ',' + str(m) + '}?'
+
+
+def exactly_n_times(n):
+    return f'{ {n} }'
+
+
+def maybe():
+    return '?'
+
+
+def one_or_more_times():
+    return '+'
+
+
+def OR():
+    return r'|'
+
+
+def zero_or_more_times():
+    return '*'
+
+
+# Metacharacters
+
+def digit():
+    return r'\d'
+
+
+def end_of_line():
+    return '$'
+
+
+def space():
+    return r'\s'
+
+
+def spaces():
+    return compose(space(), one_or_more_times())
+
+
+def start_of_line():
+    return '^'
+
+
+def tab():
+    return r'\t'
+
+
+def word():
+    return r'\w+'
+
+
+def word_boundary():
+    return r'\b'
+
+
+# Some common character patterns
+# https://thepythonguru.com/python-regular-expression/#basic-patterns-used-in-regular-expression
+
+def anything():
+    return '.*'
+
 
 def dot():
     return match('.')
@@ -157,6 +155,10 @@ def dots():
     return compose(dot(), one_or_more_times())
 
 
-def spaces():
-    return compose(space(), one_or_more_times())
+def linebreak():
+    return r'(?:(?:\n)|(?:\r\n))'
+
+
+def something():
+    return '.+'
 
